@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Note, type: :model do
   let(:user) { FactoryBot.create(:user) }
   let(:project) { FactoryBot.create(:project, owner: user) }
+  
+  # it { is_expected.to have_attachment_file(:attachment) }
 
   it "is valid with a user, project, and message" do
     note = Note.new(
